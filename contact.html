@@ -177,7 +177,11 @@ document.documentElement.classList.toggle("dark", theme === "dark");
 <h2 class="contact-section-title">Send Us A Message</h2>
 <p style="color: var(--text-muted); margin-bottom: 2.5rem;">Fill out the simple form below. We aim to respond to all inquiries within 24 hours.</p>
 
-<form id="contact-form" class="premium-form">
+<form id="contact-form" class="premium-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="82c032eb-1113-4961-8eb5-90f86905a2eb">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - Land Motives LLC">
+                    <input type="hidden" name="from_name" value="Land Motives LLC Website">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
 <div class="form-group">
 <label for="full_name">Full Name *</label>
@@ -205,9 +209,11 @@ document.documentElement.classList.toggle("dark", theme === "dark");
 <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
 </div>
 
-<button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; padding: 1rem;">
-Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i>
+<button type="submit" id="contact-submit-btn" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; padding: 1rem;">
+<span id="btn-text">Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i></span>
+<span id="btn-loading" style="display: none;">Sending... <i class="fa-solid fa-spinner fa-spin" style="margin-left: 0.5rem;"></i></span>
 </button>
+<div id="form-result" style="margin-top: 1rem; padding: 1rem 1.5rem; border-radius: 12px; display: none; font-weight: 600; font-size: 0.95rem;"></div>
 </form>
 </div>
 
@@ -279,5 +285,62 @@ Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 0.5rem;"></i
 </footer>
 
 <script src="assets/js/script.js"></script>
+<script>
+    // Web3Forms Contact Form AJAX Submission
+    const contactForm = document.getElementById('contact-form');
+    const formResult = document.getElementById('form-result');
+    const btnText = document.getElementById('btn-text');
+    const btnLoading = document.getElementById('btn-loading');
+    const submitBtn = document.getElementById('contact-submit-btn');
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Show loading state
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        formResult.style.display = 'none';
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                formResult.style.display = 'block';
+                formResult.style.background = 'rgba(16, 185, 129, 0.1)';
+                formResult.style.color = '#10B981';
+                formResult.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+                formResult.innerHTML = '<i class="fa-solid fa-circle-check" style="margin-right: 0.5rem;"></i> Message sent successfully! We\'ll get back to you within 24 hours.';
+                contactForm.reset();
+            } else {
+                formResult.style.display = 'block';
+                formResult.style.background = 'rgba(239, 68, 68, 0.1)';
+                formResult.style.color = '#EF4444';
+                formResult.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+                formResult.innerHTML = '<i class="fa-solid fa-circle-xmark" style="margin-right: 0.5rem;"></i> Something went wrong. Please try again or contact us directly.';
+            }
+        } catch (error) {
+            formResult.style.display = 'block';
+            formResult.style.background = 'rgba(239, 68, 68, 0.1)';
+            formResult.style.color = '#EF4444';
+            formResult.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+            formResult.innerHTML = '<i class="fa-solid fa-circle-xmark" style="margin-right: 0.5rem;"></i> Network error. Please check your connection and try again.';
+        } finally {
+            // Reset button state
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+        }
+    });
+</script>
 </body>
 </html>
