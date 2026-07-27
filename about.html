@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Us | Land Motives LLC – Honest Roots, Reliable Cash</title>
+<meta name="description" content="Land Motives LLC is a Wyoming-based real estate wholesaling company specializing in off-market acquisitions. We buy land, homes, and commercial properties across Texas, Wyoming, Florida & California — fast cash, zero fees, direct to seller." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.landmotivesllc.site/about.html" />
+
+<meta property="og:title" content="About Us | Land Motives LLC" />
+<meta property="og:description" content="Learn about Land Motives LLC, the premier land wholesaling company located in Sheridan, Wyoming. Honest roots, reliable cash offers." />
+<meta property="og:url" content="https://www.landmotivesllc.site/about.html" />
+<meta property="og:site_name" content="Land Motives LLC" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.landmotivesllc.site/assets/images/about_land.png" />
+
+<link rel="shortcut icon" href="assets/images/favicon.png" />
+<link rel="icon" href="assets/images/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* =============================================
+ABOUT PAGE – CUSTOM STYLES
+============================================= */
+
+/* Hero */
+.about-hero {
+padding: 10rem 0 5rem;
+position: relative;
+overflow: hidden;
+background: radial-gradient(ellipse at 50% 0%, rgba(11,44,25,0.08) 0%, transparent 70%);
+}
+.dark .about-hero {
+background: radial-gradient(ellipse at 50% 0%, rgba(207,140,23,0.06) 0%, transparent 70%);
+}
+.about-hero-bg {
+position: absolute;
+inset: 0;
+background-image:
+linear-gradient(rgba(12,38,18,0.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(12,38,18,0.04) 1px, transparent 1px);
+background-size: 60px 60px;
+pointer-events: none;
+}
+.dark .about-hero-bg {
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+}
+.about-hero-title {
+font-size: clamp(3rem, 6vw, 5.5rem);
+font-weight: 900;
+letter-spacing: -0.04em;
+line-height: 1;
+margin-bottom: 1.5rem;
+}
+.about-hero-title span { color: var(--brand-blue); }
+
+/* =============================================
+STORY / MISSION SECTION
+============================================= */
+.about-story {
+padding: 8rem 0;
+background: var(--bg-main);
+}
+.about-story-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5rem;
+align-items: center;
+}
+.about-story-img-wrap {
+position: relative;
+border-radius: 28px;
+overflow: hidden;
+box-shadow: 0 32px 80px rgba(0,0,0,0.15);
+aspect-ratio: 4/3;
+}
+.about-story-img-wrap img {
+width: 100%; height: 100%; object-fit: cover;
+transition: transform 0.6s;
+}
+.about-story-img-wrap:hover img { transform: scale(1.04); }
+.about-story-img-overlay {
+position: absolute; inset: 0;
+background: linear-gradient(to top, rgba(10,30,14,0.6) 0%, transparent 50%);
+}
+.about-story-img-badge {
+position: absolute; bottom: 1.5rem; left: 1.5rem;
+display: flex; align-items: center; gap: 0.6rem;
+background: rgba(255,255,255,0.12);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 9999px;
+padding: 0.5rem 1rem;
+color: white; font-size: 0.85rem; font-weight: 800;
+}
+.about-story-img-badge i { color: var(--brand-blue); }
+.about-section-badge {
+display: inline-flex; align-items: center; gap: 0.5rem;
+padding: 0.4rem 1rem;
+border-radius: 9999px;
+font-size: 0.75rem; font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+margin-bottom: 1.25rem;
+background: rgba(207,140,23,0.12);
+color: #CF8C17;
+border: 1px solid rgba(207,140,23,0.25);
+}
+.about-section-title {
+font-size: clamp(2.2rem, 4vw, 3rem);
+font-weight: 900;
+letter-spacing: -0.03em;
+line-height: 1.1;
+margin-bottom: 1.5rem;
+}
+.about-section-desc {
+font-size: 1.05rem;
+color: var(--text-muted);
+line-height: 1.8;
+margin-bottom: 2rem;
+}
+.about-highlight-list {
+display: flex; flex-direction: column; gap: 1rem;
+}
+.about-highlight {
+display: flex; align-items: flex-start; gap: 1rem;
+padding: 1rem 1.25rem;
+background: var(--card-bg);
+border: 1px solid var(--card-border);
+border-radius: 16px;
+transition: 0.2s;
+}
+.dark .about-highlight {
+background: rgba(255,255,255,0.03);
+border-color: rgba(255,255,255,0.06);
+}
+.about-highlight:hover {
+border-color: rgba(207,140,23,0.3);
+transform: translateY(-2px);
+}
+.about-hl-icon {
+width: 40px; height: 40px; min-width: 40px;
+background: rgba(207,140,23,0.1);
+border-radius: 12px;
+display: flex; align-items: center; justify-content: center;
+color: var(--brand-blue); font-size: 1rem;
+}
+.about-hl-text strong {
+display: block; font-size: 0.9rem; font-weight: 800;
+margin-bottom: 0.2rem;
+}
+.about-hl-text span {
+font-size: 0.82rem; color: var(--text-muted);
+}
+
+/* =============================================
+STATS COUNTER BAR
+============================================= */
+.about-stats-section {
+padding: 4rem 0;
+background: linear-gradient(135deg, #0C2612, #1a4a28);
+}
+.about-stats-bar {
+display: flex; gap: 0;
+}
+.about-stat {
+flex: 1; text-align: center;
+padding: 2rem 1.5rem;
+border-right: 1px solid rgba(255,255,255,0.08);
+}
+.about-stat:last-child { border-right: none; }
+.about-stat-num {
+font-size: clamp(2rem, 3vw, 3rem);
+font-weight: 900; color: var(--brand-blue);
+line-height: 1; margin-bottom: 0.5rem;
+}
+.about-stat-label {
+font-size: 0.82rem; font-weight: 700;
+color: rgba(255,255,255,0.55);
+text-transform: uppercase;
+letter-spacing: 0.08em;
+}
+
+/* =============================================
+CORE VALUES
+============================================= */
+.about-values {
+padding: 8rem 0;
+background: var(--card-bg);
+border-top: 1px solid var(--card-border);
+border-bottom: 1px solid var(--card-border);
+}
+.values-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-top: 4rem;
+}
+.value-card {
+background: var(--bg-main);
+border: 1px solid var(--card-border);
+border-radius: 24px;
+padding: 2.5rem 2rem;
+position: relative;
+overflow: hidden;
+transition: 0.3s;
+}
+.dark .value-card {
+background: rgba(255,255,255,0.02);
+border-color: rgba(255,255,255,0.05);
+}
+.value-card::before {
+content: '';
+position: absolute; top: 0; left: 0; right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(--brand-blue), transparent);
+opacity: 0; transition: opacity 0.3s;
+}
+.value-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+border-color: rgba(207,140,23,0.2);
+}
+.value-card:hover::before { opacity: 1; }
+.value-icon {
+width: 64px; height: 64px;
+background: linear-gradient(135deg, rgba(207,140,23,0.12), rgba(207,140,23,0.06));
+border-radius: 18px;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.5rem; color: var(--brand-blue);
+margin-bottom: 1.5rem;
+transition: 0.3s;
+}
+.value-card:hover .value-icon {
+background: rgba(207,140,23,0.2);
+transform: scale(1.1);
+}
+.value-title {
+font-size: 1.2rem; font-weight: 900;
+margin-bottom: 0.75rem;
+}
+.value-desc {
+font-size: 0.92rem;
+color: var(--text-muted);
+line-height: 1.7;
+}
+
+/* =============================================
+TEAM / WHO WE ARE
+============================================= */
+.about-team {
+padding: 8rem 0;
+background: var(--bg-main);
+}
+.about-team-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5rem;
+align-items: center;
+}
+.about-team-grid.reverse { direction: rtl; }
+.about-team-grid.reverse > * { direction: ltr; }
+
+/* =============================================
+WHY CHOOSE US - Bento
+============================================= */
+.why-us-section {
+padding: 8rem 0;
+background: linear-gradient(135deg, #0C2612, #1a4a28);
+position: relative;
+overflow: hidden;
+}
+.why-us-section::before {
+content: '';
+position: absolute; inset: 0;
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size: 54px 54px;
+}
+.why-us-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+margin-top: 4rem;
+}
+.why-us-card {
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 24px;
+padding: 2.5rem 2rem;
+transition: 0.3s;
+position: relative;
+overflow: hidden;
+}
+.why-us-card:hover {
+background: rgba(255,255,255,0.07);
+border-color: rgba(207,140,23,0.3);
+transform: translateY(-4px);
+box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.why-us-card.featured {
+grid-column: 1 / -1;
+display: grid;
+grid-template-columns: auto 1fr;
+gap: 2rem;
+align-items: center;
+}
+.wuc-icon {
+width: 60px; height: 60px;
+background: rgba(207,140,23,0.12);
+border-radius: 18px;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.5rem; color: var(--brand-blue);
+margin-bottom: 1.25rem;
+transition: 0.3s;
+}
+.why-us-card:hover .wuc-icon {
+background: rgba(207,140,23,0.2);
+transform: scale(1.1);
+}
+.why-us-card.featured .wuc-icon {
+width: 80px; height: 80px;
+font-size: 2rem; margin-bottom: 0;
+}
+.wuc-title {
+font-size: 1.15rem; font-weight: 900;
+color: white; margin-bottom: 0.5rem;
+}
+.wuc-desc {
+font-size: 0.9rem;
+color: rgba(255,255,255,0.6);
+line-height: 1.7;
+}
+.wuc-tag {
+display: inline-flex;
+padding: 0.3rem 0.8rem;
+background: rgba(207,140,23,0.15);
+color: var(--brand-blue);
+border-radius: 9999px;
+font-size: 0.7rem; font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+margin-top: 1rem;
+}
+
+/* =============================================
+TIMELINE / MILESTONES
+============================================= */
+.about-timeline {
+padding: 8rem 0;
+background: var(--card-bg);
+border-top: 1px solid var(--card-border);
+border-bottom: 1px solid var(--card-border);
+}
+.timeline-track {
+position: relative;
+max-width: 800px;
+margin: 4rem auto 0;
+}
+.timeline-track::before {
+content: '';
+position: absolute;
+top: 0; bottom: 0;
+left: 28px;
+width: 3px;
+background: linear-gradient(to bottom, var(--brand-blue), rgba(207,140,23,0.1));
+border-radius: 9999px;
+}
+.timeline-item {
+display: flex;
+gap: 2rem;
+margin-bottom: 3rem;
+position: relative;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+.tl-dot {
+width: 58px; height: 58px; min-width: 58px;
+background: var(--bg-main);
+border: 3px solid var(--brand-blue);
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.1rem; font-weight: 900;
+color: var(--brand-blue);
+z-index: 1;
+box-shadow: 0 0 0 6px var(--card-bg);
+}
+.dark .tl-dot {
+background: #091A0C;
+box-shadow: 0 0 0 6px #091A0C;
+}
+.tl-content {
+background: var(--bg-main);
+border: 1px solid var(--card-border);
+border-radius: 20px;
+padding: 1.75rem 2rem;
+flex: 1;
+transition: 0.2s;
+}
+.dark .tl-content {
+background: rgba(255,255,255,0.03);
+border-color: rgba(255,255,255,0.06);
+}
+.tl-content:hover {
+border-color: rgba(207,140,23,0.3);
+transform: translateX(4px);
+}
+.tl-year {
+font-size: 0.75rem; font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+color: var(--brand-blue);
+margin-bottom: 0.5rem;
+}
+.tl-title {
+font-size: 1.15rem; font-weight: 900;
+margin-bottom: 0.5rem;
+}
+.tl-desc {
+font-size: 0.9rem;
+color: var(--text-muted);
+line-height: 1.7;
+}
+
+/* =============================================
+CONTACT CTA
+============================================= */
+.about-cta {
+padding: 7rem 0;
+background: linear-gradient(135deg, #0C2612, #1a4a28);
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.about-cta::before {
+content: '';
+position: absolute; inset: 0;
+background-image:
+radial-gradient(circle at 20% 50%, rgba(207,140,23,0.08) 0%, transparent 50%),
+radial-gradient(circle at 80% 50%, rgba(207,140,23,0.06) 0%, transparent 50%);
+}
+
+/* =============================================
+RESPONSIVE
+============================================= */
+@media (max-width: 768px) {
+.about-story-grid,
+.about-team-grid,
+.about-team-grid.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
+.values-grid { grid-template-columns: 1fr; }
+.why-us-grid { grid-template-columns: 1fr; }
+.why-us-card.featured { grid-template-columns: 1fr; }
+.about-stats-bar { flex-direction: column; }
+.about-stat {
+border-right: none;
+border-bottom: 1px solid rgba(255,255,255,0.08);
+padding: 1.5rem;
+}
+.about-stat:last-child { border-bottom: none; }
+.timeline-track::before { left: 28px; }
+}
+</style>
+
+<script>
+(function () {
+try {
+var savedTheme = localStorage.getItem("theme");
+var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+var theme = savedTheme || (prefersDark ? "dark" : "light");
+document.documentElement.classList.toggle("dark", theme === "dark");
+} catch (error) {}
+})();
+</script>
+</head>
+<body>
+
+<header class="header-nav">
+<div class="nav-inner">
+<a href="index.html" class="nav-logo">
+<img src="assets/images/logo.png" alt="Land Motives LLC Logo">
+<span class="nav-brand-text">LandMotivesLLC</span>
+</a>
+
+<nav class="nav-links">
+<a href="about.html" class="nav-link" style="color: var(--brand-blue);">About Us</a>
+<a href="process.html" class="nav-link">Our Process</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="markets.html" class="nav-link">Markets</a>
+<a href="faqs.html" class="nav-link">FAQs</a>
+<a href="contact.html" class="nav-link">Contact</a>
+
+<div class="nav-dropdown">
+<a href="#" class="nav-link" style="cursor: default;">Policies <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+<div class="dropdown-menu">
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="refund-policy.html">Refund Policy</a>
+<a href="terms-conditions.html">Terms &amp; Conditions</a>
+</div>
+</div>
+</nav>
+
+<div class="nav-actions">
+<button class="theme-btn" aria-label="Toggle theme">
+<i class="fa-solid fa-moon"></i>
+</button>
+<a href="tel:3074301099" class="btn-book"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> Call (307) 430-1099</a>
+<button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+<div class="hamburger-lines">
+<span class="line line1"></span>
+<span class="line line2"></span>
+<span class="line line3"></span>
+</div>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay">
+<div class="mobile-nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="process.html">Our Process</a>
+<a href="services.html">Services</a>
+<a href="markets.html">Markets</a>
+<a href="faqs.html">FAQs</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="mobile-policies-heading">Policies</div>
+<div class="mobile-nav-links">
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="refund-policy.html">Refund Policy</a>
+<a href="terms-conditions.html">Terms &amp; Conditions</a>
+</div>
+
+<div class="mobile-call-btn-wrapper">
+<a href="tel:3074301099" class="btn-primary" style="width: 100%; justify-content: center; background: var(--brand-blue); color: #051208;"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> Call Us Now</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ==============================
+HERO SECTION
+============================== -->
+<section class="about-hero">
+<div class="about-hero-bg"></div>
+<div class="container-premium" style="position: relative; z-index: 1; text-align: center;">
+<div class="badge-primary animate-up" style="display: inline-flex;">
+<i class="fa-solid fa-users"></i> About Land Motives LLC
+</div>
+<h1 class="about-hero-title animate-up">
+Honest Roots.<br><span>Reliable Cash Solutions.</span>
+</h1>
+<p class="hero-desc animate-up">
+We are a Wyoming-based real estate wholesaling company that buys land, homes, and commercial properties directly from owners — 100% off-market, zero fees, and fast cash closings across Texas, Wyoming, Florida & California.
+</p>
+<div class="hero-actions animate-up" style="margin-bottom: 0;">
+<a href="contact.html" class="btn-primary">Get a Cash Offer <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+<a href="#our-story" class="btn-secondary"><i class="fa-solid fa-book-open"></i> Our Story</a>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+STATS BAR
+============================== -->
+<section class="about-stats-section">
+<div class="container-premium">
+<div class="about-stats-bar animate-up">
+<div class="about-stat">
+<div class="about-stat-num">1,500+</div>
+<div class="about-stat-label">Deals Closed</div>
+</div>
+<div class="about-stat">
+<div class="about-stat-num">4</div>
+<div class="about-stat-label">Primary Markets</div>
+</div>
+<div class="about-stat">
+<div class="about-stat-num">$0</div>
+<div class="about-stat-label">Seller Fees</div>
+</div>
+<div class="about-stat">
+<div class="about-stat-num">14</div>
+<div class="about-stat-label">Day Avg Close</div>
+</div>
+<div class="about-stat">
+<div class="about-stat-num">100%</div>
+<div class="about-stat-label">Off-Market</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+OUR STORY / MISSION
+============================== -->
+<section class="about-story" id="our-story">
+<div class="container-premium">
+<div class="about-story-grid">
+<!-- Image -->
+<div class="about-story-img-wrap animate-up">
+<img src="assets/images/about_mission.png" alt="Wyoming landscape – Land Motives LLC headquarters" loading="lazy">
+<div class="about-story-img-overlay"></div>
+<div class="about-story-img-badge">
+<i class="fa-solid fa-location-dot"></i> Sheridan, Wyoming
+</div>
+</div>
+<!-- Content -->
+<div class="animate-up">
+<div class="about-section-badge">
+<i class="fa-solid fa-book-open"></i> Our Story
+</div>
+<h2 class="about-section-title">Built on Wyoming Values. Driven by Real Solutions.</h2>
+<p class="about-section-desc">
+Land Motives LLC was founded in Sheridan, Wyoming with a simple goal: make it easy for property owners to sell their land, homes, and commercial properties without the headaches of traditional real estate. We saw an industry full of hidden fees, months-long timelines, and broken promises — and we decided to do it differently.
+</p>
+<p class="about-section-desc" style="margin-bottom: 2.5rem;">
+Today, we operate across four primary markets — <strong>Texas, Wyoming, Florida, and California</strong> — buying directly from motivated sellers with fast cash offers, zero agent fees, and a transparent closing process that takes an average of just 14 days. We're not a faceless corporation. We're real people who answer the phone, shake hands, and keep our word.
+</p>
+
+<div class="about-highlight-list">
+<div class="about-highlight">
+<div class="about-hl-icon"><i class="fa-solid fa-location-dot"></i></div>
+<div class="about-hl-text">
+<strong>Headquartered in Sheridan, WY</strong>
+<span>30 N Gould St #60206, Sheridan, WY 82801</span>
+</div>
+</div>
+<div class="about-highlight">
+<div class="about-hl-icon"><i class="fa-solid fa-handshake"></i></div>
+<div class="about-hl-text">
+<strong>Direct Seller Communication</strong>
+<span>No call centers, no middlemen — you speak directly with our team</span>
+</div>
+</div>
+<div class="about-highlight">
+<div class="about-hl-icon"><i class="fa-solid fa-lock-open"></i></div>
+<div class="about-hl-text">
+<strong>100% Off-Market Operations</strong>
+<span>We never list on MLS — every deal is direct, seller-to-buyer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+OUR MISSION – Team Image
+============================== -->
+<section class="about-team">
+<div class="container-premium">
+<div class="about-team-grid reverse">
+<!-- Image -->
+<div class="about-story-img-wrap animate-up">
+<img src="assets/images/about_team.png" alt="Land Motives LLC professional team" loading="lazy">
+<div class="about-story-img-overlay"></div>
+<div class="about-story-img-badge">
+<i class="fa-solid fa-star"></i> Our Acquisition Team
+</div>
+</div>
+<!-- Content -->
+<div class="animate-up">
+<div class="about-section-badge">
+<i class="fa-solid fa-bullseye"></i> Our Mission
+</div>
+<h2 class="about-section-title">Fast, Fair & Transparent. Every Single Deal.</h2>
+<p class="about-section-desc">
+Our mission is simple: provide landowners and property owners with a transparent, fast, and stress-free way to sell. We believe in straightforward cash offers, covering all closing costs, and communicating directly without the corporate red tape.
+</p>
+<p class="about-section-desc" style="margin-bottom: 2.5rem;">
+We work with all property types — <strong>land, lots, single-family homes, multi-family homes, and commercial properties</strong>. We also actively partner with other wholesale companies through <strong>JV (Joint Venture) agreements</strong>, creating deal flow opportunities for everyone involved.
+</p>
+
+<div class="about-highlight-list">
+<div class="about-highlight">
+<div class="about-hl-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+<div class="about-hl-text">
+<strong>Cash-Funded Acquisitions</strong>
+<span>All offers are backed by real capital — no bank financing contingencies</span>
+</div>
+</div>
+<div class="about-highlight">
+<div class="about-hl-icon"><i class="fa-solid fa-file-signature"></i></div>
+<div class="about-hl-text">
+<strong>JV Partnership Ready</strong>
+<span>We partner with wholesalers nationwide under formal JV agreements</span>
+</div>
+</div>
+<div class="about-highlight">
+<div class="about-hl-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+<div class="about-hl-text">
+<strong>We Pay All Closing Costs</strong>
+<span>Title fees, recording fees, transfer taxes — we cover everything</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+CORE VALUES
+============================== -->
+<section class="about-values">
+<div class="container-premium">
+<div class="text-center animate-up">
+<div class="badge-primary" style="display: inline-flex;">
+<i class="fa-solid fa-gem"></i> Core Values
+</div>
+<h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.03em;">What We Stand For.</h2>
+<p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
+These are the principles that guide every acquisition, every conversation, and every closing.
+</p>
+</div>
+
+<div class="values-grid">
+<div class="value-card animate-up">
+<div class="value-icon"><i class="fa-solid fa-shield-halved"></i></div>
+<h3 class="value-title">Integrity First</h3>
+<p class="value-desc">
+We say what we mean and we do what we say. Every offer we make is real, every timeline we give is honest, and every promise we make is kept. No bait-and-switch, no hidden clauses, no last-minute surprises.
+</p>
+</div>
+<div class="value-card animate-up">
+<div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
+<h3 class="value-title">Speed & Efficiency</h3>
+<p class="value-desc">
+We know your time is valuable. That's why we deliver offers within 48 hours, sign digitally, and close in an average of 14 days. We've stripped away every unnecessary step so you get paid faster.
+</p>
+</div>
+<div class="value-card animate-up">
+<div class="value-icon"><i class="fa-solid fa-eye"></i></div>
+<h3 class="value-title">Full Transparency</h3>
+<p class="value-desc">
+You'll never wonder what's happening with your deal. We keep you informed at every step — from initial offer to final payout. Open communication is not a perk for us, it's a requirement.
+</p>
+</div>
+<div class="value-card animate-up">
+<div class="value-icon"><i class="fa-solid fa-people-group"></i></div>
+<h3 class="value-title">People Over Profit</h3>
+<p class="value-desc">
+We don't see parcels and plots — we see people with real situations. Whether you're dealing with inheritance, taxes, relocation, or just want to move on, we meet you where you are with empathy and respect.
+</p>
+</div>
+<div class="value-card animate-up">
+<div class="value-icon"><i class="fa-solid fa-handshake"></i></div>
+<h3 class="value-title">Partnership Mindset</h3>
+<p class="value-desc">
+We don't just buy properties — we build relationships. From JV partnerships with wholesale companies to long-term connections with sellers, we're in this for the long haul. Repeat business is our best metric.
+</p>
+</div>
+<div class="value-card animate-up">
+<div class="value-icon"><i class="fa-solid fa-seedling"></i></div>
+<h3 class="value-title">Community Growth</h3>
+<p class="value-desc">
+Every deal we close contributes to community development. By acquiring underutilized properties and connecting them with buyers who will put them to use, we help revitalize neighborhoods and create local value.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+WHY CHOOSE US
+============================== -->
+<section class="why-us-section">
+<div class="container-premium" style="position: relative; z-index: 1;">
+<div class="text-center animate-up">
+<div class="badge-primary" style="display: inline-flex; background: rgba(207,140,23,0.15); color: var(--brand-blue);">
+<i class="fa-solid fa-trophy"></i> Why Land Motives
+</div>
+<h2 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: white; margin-bottom: 1rem; letter-spacing: -0.03em;">What Sets Us Apart.</h2>
+<p style="color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.7;">
+Not all wholesalers are the same. Here's why sellers and partners choose Land Motives LLC.
+</p>
+</div>
+
+<div class="why-us-grid">
+<!-- Featured Full-Width -->
+<div class="why-us-card featured animate-up">
+<div class="wuc-icon"><i class="fa-solid fa-lock-open"></i></div>
+<div>
+<div class="wuc-title">Completely Off-Market — We Never List</div>
+<div class="wuc-desc">Every deal is sourced and closed off-market. We buy directly from sellers — no MLS, no public listings, no agents taking a cut. This means faster closings, lower costs, and full privacy for you throughout the entire transaction process.</div>
+<div class="wuc-tag">Core Advantage</div>
+</div>
+</div>
+
+<div class="why-us-card animate-up">
+<div class="wuc-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+<h3 class="wuc-title">Fast Cash Offers</h3>
+<p class="wuc-desc">We make competitive cash offers quickly so you can make decisions without waiting on bank approvals.</p>
+</div>
+
+<div class="why-us-card animate-up">
+<div class="wuc-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+<h3 class="wuc-title">Zero Closing Costs</h3>
+<p class="wuc-desc">We cover all traditional fees, commissions, and closing costs. The offer you receive is the amount you get.</p>
+</div>
+
+<div class="why-us-card animate-up">
+<div class="wuc-icon"><i class="fa-solid fa-file-signature"></i></div>
+<h3 class="wuc-title">Simple Paperwork</h3>
+<p class="wuc-desc">We handle all the heavy lifting with title companies to ensure a smooth, hassle-free transaction.</p>
+</div>
+
+<div class="why-us-card animate-up">
+<div class="wuc-icon"><i class="fa-solid fa-calendar-check"></i></div>
+<h3 class="wuc-title">Flexible Closing</h3>
+<p class="wuc-desc">You choose the timeline. We can close as fast as 14 days or schedule it for a date that works best for you.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ==============================
+TIMELINE / MILESTONES
+============================== -->
+<section class="about-timeline">
+<div class="container-premium">
+<div class="text-center animate-up">
+<div class="badge-primary" style="display: inline-flex;">
+<i class="fa-solid fa-route"></i> Our Journey
+</div>
+<h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.03em;">How We Got Here.</h2>
+<p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
+A timeline of our growth, milestones, and the steps we've taken to become a trusted wholesale partner.
+</p>
+</div>
+
+<div class="timeline-track">
+<div class="timeline-item animate-up">
+<div class="tl-dot"><i class="fa-solid fa-flag"></i></div>
+<div class="tl-content">
+<div class="tl-year">2020</div>
+<h3 class="tl-title">Foundation in Wyoming</h3>
+<p class="tl-desc">Land Motives LLC was established in Sheridan, WY, focusing initially on local rural land acquisitions and building our core team.</p>
+</div>
+</div>
+<div class="timeline-item animate-up">
+<div class="tl-dot"><i class="fa-solid fa-map-location-dot"></i></div>
+<div class="tl-content">
+<div class="tl-year">2021</div>
+<h3 class="tl-title">Expansion to Texas & Florida</h3>
+<p class="tl-desc">Recognizing the need for fast cash solutions, we expanded our operations into the thriving Texas and Florida real estate markets.</p>
+</div>
+</div>
+<div class="timeline-item animate-up">
+<div class="tl-dot"><i class="fa-solid fa-handshake"></i></div>
+<div class="tl-content">
+<div class="tl-year">2022</div>
+<h3 class="tl-title">1,000+ Deals Closed</h3>
+<p class="tl-desc">Reached a major milestone of successfully closing over 1,000 properties, helping hundreds of owners sell without the hassle.</p>
+</div>
+</div>
+<div class="timeline-item animate-up">
+<div class="tl-dot"><i class="fa-solid fa-chart-line"></i></div>
+<div class="tl-content">
+<div class="tl-year">2023 - Present</div>
+<h3 class="tl-title">JV Partnerships & Commercial Expansion</h3>
+<p class="tl-desc">Began actively partnering with other wholesalers and expanding our portfolio to include commercial properties and multi-family units.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+CONTACT CTA
+============================== -->
+<section class="about-cta">
+<div class="container-premium" style="position: relative; z-index: 1;">
+<h2 class="animate-up" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: white; margin-bottom: 1.5rem; letter-spacing: -0.03em;">Ready to Sell?</h2>
+<p class="animate-up" style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem; line-height: 1.8;">
+Get a fair, no-obligation cash offer for your property today. Fast closings, zero fees, and transparent communication from start to finish.
+</p>
+<div class="animate-up" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+<a href="contact.html" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.1rem; background: var(--brand-blue); color: #051208; border: none;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i> Request Offer</a>
+<a href="tel:3074301099" class="btn-secondary" style="padding: 1.25rem 2.5rem; font-size: 1.1rem; background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4);"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> (307) 430-1099</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer style="margin-top: 0;">
+<div class="container-premium footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+<!-- Logo & About -->
+<div>
+<div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+<img src="assets/images/logo.png" alt="Land Motives Logo" style="height: 40px;">
+<span style="font-weight: 900; font-size: 1.25rem; color: white; letter-spacing: -0.5px;">LandMotivesLLC</span>
+</div>
+<p style="margin-bottom: 1rem; color: rgba(255,255,255,0.7);">Land Motives LLC delivers expert land wholesaling, fast cash offers, and zero-fee land acquisitions nationwide.</p>
+<div style="display: flex; gap: 1rem; margin-top: 1rem;">
+<a href="https://www.facebook.com/share/18nmbTeqps/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" style="color: white; font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='white'"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://wa.me/17373076462" target="_blank" aria-label="WhatsApp" style="color: white; font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='white'"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/landmotives/" target="_blank" aria-label="Instagram" style="color: white; font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='white'"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+
+<!-- Pages -->
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<h4 style="color: white; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Company</h4>
+<a href="index.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Home</a>
+<a href="about.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">About Us</a>
+<a href="process.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Our Process</a>
+<a href="services.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Services</a>
+<a href="markets.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Markets</a>
+<a href="faqs.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FAQs</a>
+<a href="contact.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a>
+</div>
+
+<!-- Legal -->
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<h4 style="color: white; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Legal</h4>
+<a href="privacy-policy.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Privacy Policy</a>
+<a href="terms-conditions.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Terms & Conditions</a>
+<a href="refund-policy.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Refund Policy</a>
+</div>
+
+<!-- Contact -->
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<h4 style="color: white; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Contact Us</h4>
+<a href="tel:3074301099" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'"><i class="fa-solid fa-phone" style="width: 16px; text-align: center;"></i> (307) 430-1099</a>
+<a href="mailto:info@landmotivesllc.site" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'"><i class="fa-solid fa-envelope" style="width: 16px; text-align: center;"></i> info@landmotivesllc.site</a>
+<div style="color: rgba(255,255,255,0.7); display: flex; align-items: flex-start; gap: 0.5rem;">
+<i class="fa-solid fa-location-dot" style="width: 16px; text-align: center; margin-top: 5px;"></i> 
+<span>30 N Gould St #60206<br>Sheridan, WY 82801</span>
+</div>
+</div>
+</div>
+<div class="container-premium" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
+&copy; 2026 Land Motives LLC. All rights reserved.
+</div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

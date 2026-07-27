@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Markets We Serve | Land Motives LLC – Texas, Wyoming, Florida, California</title>
+<meta name="description" content="Land Motives LLC operates in 4 primary markets: Texas, Wyoming, Florida, and California. We buy land, lots, single family homes, multi-family homes, and commercial properties – fully off-market, direct to seller." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.landmotivesllc.site/markets.html" />
+
+<meta property="og:title" content="Markets We Serve | Land Motives LLC" />
+<meta property="og:description" content="We operate in Texas, Wyoming, Florida & California. Off-market acquisitions, direct to seller, and JV partnerships with wholesale companies." />
+<meta property="og:url" content="https://www.landmotivesllc.site/markets.html" />
+<meta property="og:site_name" content="Land Motives LLC" />
+
+<link rel="shortcut icon" href="assets/images/favicon.png" />
+<link rel="icon" href="assets/images/favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* =============================================
+MARKETS PAGE – CUSTOM STYLES
+============================================= */
+
+/* Hero */
+.markets-hero {
+padding: 10rem 0 6rem;
+position: relative;
+overflow: hidden;
+background: radial-gradient(ellipse at 50% 0%, rgba(11,44,25,0.08) 0%, transparent 70%);
+}
+.dark .markets-hero {
+background: radial-gradient(ellipse at 50% 0%, rgba(207,140,23,0.06) 0%, transparent 70%);
+}
+.markets-hero-bg-pattern {
+position: absolute;
+inset: 0;
+background-image:
+linear-gradient(rgba(12,38,18,0.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(12,38,18,0.04) 1px, transparent 1px);
+background-size: 60px 60px;
+pointer-events: none;
+}
+.dark .markets-hero-bg-pattern {
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+}
+.markets-hero-title {
+font-size: clamp(3rem, 6vw, 5.5rem);
+font-weight: 900;
+letter-spacing: -0.04em;
+line-height: 1;
+margin-bottom: 1.5rem;
+}
+.markets-hero-title span {
+color: var(--brand-blue);
+}
+
+/* Stats Bar */
+.markets-stats-bar {
+display: flex;
+gap: 0;
+border: 1px solid var(--card-border);
+border-radius: 20px;
+overflow: hidden;
+background: var(--card-bg);
+box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+.mkt-stat {
+flex: 1;
+padding: 2rem 1.5rem;
+text-align: center;
+border-right: 1px solid var(--card-border);
+transition: background 0.2s;
+}
+.mkt-stat:last-child { border-right: none; }
+.mkt-stat:hover { background: rgba(11,44,25,0.03); }
+.dark .mkt-stat:hover { background: rgba(255,255,255,0.03); }
+.mkt-stat-num {
+font-size: 2.5rem;
+font-weight: 900;
+color: var(--brand-blue);
+line-height: 1;
+margin-bottom: 0.5rem;
+}
+.mkt-stat-label {
+font-size: 0.8rem;
+font-weight: 700;
+color: var(--text-muted);
+text-transform: uppercase;
+letter-spacing: 0.08em;
+}
+
+/* =============================================
+MARKET STATE CARDS – Full Width Showcases
+============================================= */
+.state-showcase {
+padding: 8rem 0;
+position: relative;
+}
+.state-showcase:nth-child(odd) {
+background: var(--bg-main);
+}
+.state-showcase:nth-child(even) {
+background: var(--card-bg);
+border-top: 1px solid var(--card-border);
+border-bottom: 1px solid var(--card-border);
+}
+.state-showcase-inner {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5rem;
+align-items: center;
+}
+.state-showcase-inner.reverse {
+direction: rtl;
+}
+.state-showcase-inner.reverse > * {
+direction: ltr;
+}
+.state-img-wrap {
+position: relative;
+border-radius: 28px;
+overflow: hidden;
+box-shadow: 0 32px 80px rgba(0,0,0,0.18);
+aspect-ratio: 4/3;
+}
+.state-img-wrap img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.6s ease;
+}
+.state-img-wrap:hover img {
+transform: scale(1.04);
+}
+.state-img-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(to top, rgba(10,30,14,0.7) 0%, transparent 50%);
+}
+.state-img-badge {
+position: absolute;
+bottom: 1.5rem;
+left: 1.5rem;
+display: flex;
+align-items: center;
+gap: 0.6rem;
+background: rgba(255,255,255,0.12);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 9999px;
+padding: 0.5rem 1rem;
+color: white;
+font-size: 0.85rem;
+font-weight: 800;
+}
+.state-img-badge i { color: var(--brand-blue); }
+.state-number-badge {
+position: absolute;
+top: 1.5rem;
+right: 1.5rem;
+width: 52px;
+height: 52px;
+background: var(--brand-blue);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+font-weight: 900;
+color: #0C2612;
+box-shadow: 0 8px 20px rgba(207,140,23,0.4);
+}
+
+/* State Content */
+.state-content-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.4rem 1rem;
+border-radius: 9999px;
+font-size: 0.75rem;
+font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+margin-bottom: 1.25rem;
+}
+.state-content-badge.primary-market {
+background: rgba(207,140,23,0.12);
+color: #CF8C17;
+border: 1px solid rgba(207,140,23,0.25);
+}
+.state-content-badge.hq-market {
+background: rgba(11,44,25,0.1);
+color: var(--brand);
+border: 1px solid rgba(11,44,25,0.2);
+}
+.dark .state-content-badge.hq-market {
+background: rgba(207,140,23,0.1);
+color: var(--brand-blue);
+border-color: rgba(207,140,23,0.2);
+}
+.state-name {
+font-size: clamp(2.5rem, 4vw, 3.5rem);
+font-weight: 900;
+letter-spacing: -0.03em;
+line-height: 1;
+margin-bottom: 1.25rem;
+}
+.state-desc {
+font-size: 1.05rem;
+color: var(--text-muted);
+line-height: 1.75;
+margin-bottom: 2rem;
+}
+
+/* Property Tags inside state cards */
+.state-prop-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 0.6rem;
+margin-bottom: 2rem;
+}
+.prop-tag {
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+padding: 0.45rem 0.9rem;
+background: var(--bg-main);
+border: 1px solid var(--card-border);
+border-radius: 9999px;
+font-size: 0.8rem;
+font-weight: 700;
+color: var(--text-main);
+transition: 0.2s;
+}
+.dark .prop-tag {
+background: rgba(255,255,255,0.04);
+border-color: rgba(255,255,255,0.08);
+}
+.prop-tag:hover {
+border-color: var(--brand-blue);
+color: var(--brand-blue);
+}
+.prop-tag i { color: var(--brand-blue); font-size: 0.75rem; }
+
+/* State Highlights Grid */
+.state-highlights {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.75rem;
+}
+.state-highlight-item {
+display: flex;
+align-items: flex-start;
+gap: 0.75rem;
+padding: 1rem;
+background: var(--bg-main);
+border: 1px solid var(--card-border);
+border-radius: 16px;
+transition: 0.2s;
+}
+.dark .state-highlight-item {
+background: rgba(255,255,255,0.03);
+border-color: rgba(255,255,255,0.06);
+}
+.state-highlight-item:hover {
+border-color: rgba(207,140,23,0.3);
+transform: translateY(-2px);
+}
+.sh-icon {
+width: 36px;
+height: 36px;
+min-width: 36px;
+background: rgba(207,140,23,0.1);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--brand-blue);
+font-size: 0.9rem;
+}
+.sh-text { flex: 1; }
+.sh-text strong {
+display: block;
+font-size: 0.85rem;
+font-weight: 800;
+margin-bottom: 0.15rem;
+}
+.sh-text span {
+font-size: 0.78rem;
+color: var(--text-muted);
+}
+
+/* =============================================
+PROPERTY TYPES SECTION
+============================================= */
+.prop-types-section {
+padding: 8rem 0;
+background: linear-gradient(135deg, #0C2612 0%, #1a4a28 100%);
+position: relative;
+overflow: hidden;
+}
+.prop-types-section::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size: 54px 54px;
+}
+.prop-types-heading {
+color: white;
+font-size: clamp(2rem, 4vw, 3.2rem);
+font-weight: 900;
+letter-spacing: -0.03em;
+margin-bottom: 1rem;
+}
+.prop-types-subhead {
+color: rgba(255,255,255,0.65);
+font-size: 1.05rem;
+max-width: 600px;
+margin: 0 auto 4rem;
+line-height: 1.7;
+}
+.prop-types-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 1.5rem;
+}
+.prop-type-card {
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 24px;
+padding: 2rem 1.5rem;
+text-align: center;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+cursor: default;
+}
+.prop-type-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(--brand-blue), transparent);
+opacity: 0;
+transition: opacity 0.3s;
+}
+.prop-type-card:hover {
+background: rgba(255,255,255,0.07);
+border-color: rgba(207,140,23,0.3);
+transform: translateY(-6px);
+box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.prop-type-card:hover::before { opacity: 1; }
+.pt-icon-wrap {
+width: 72px;
+height: 72px;
+background: rgba(207,140,23,0.12);
+border-radius: 22px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 1.25rem;
+font-size: 1.75rem;
+color: var(--brand-blue);
+transition: 0.3s;
+}
+.prop-type-card:hover .pt-icon-wrap {
+background: rgba(207,140,23,0.2);
+transform: scale(1.1);
+}
+.pt-name {
+font-size: 1rem;
+font-weight: 800;
+color: white;
+margin-bottom: 0.75rem;
+line-height: 1.2;
+}
+.pt-desc {
+font-size: 0.82rem;
+color: rgba(255,255,255,0.6);
+line-height: 1.6;
+}
+
+/* =============================================
+JV PARTNERSHIP SECTION
+============================================= */
+.jv-section {
+padding: 8rem 0;
+background: var(--bg-main);
+position: relative;
+}
+.jv-inner {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5rem;
+align-items: center;
+}
+.jv-diagram {
+position: relative;
+}
+.jv-center-node {
+width: 120px;
+height: 120px;
+background: linear-gradient(135deg, #0C2612, #1a4a28);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 2rem;
+box-shadow: 0 0 0 12px rgba(11,44,25,0.08), 0 0 0 24px rgba(11,44,25,0.04);
+position: relative;
+}
+.dark .jv-center-node {
+box-shadow: 0 0 0 12px rgba(207,140,23,0.08), 0 0 0 24px rgba(207,140,23,0.04);
+}
+.jv-center-node i {
+font-size: 2.5rem;
+color: var(--brand-blue);
+}
+.jv-nodes-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+}
+.jv-node {
+background: var(--card-bg);
+border: 1px solid var(--card-border);
+border-radius: 18px;
+padding: 1.25rem;
+display: flex;
+align-items: center;
+gap: 0.75rem;
+transition: 0.3s;
+}
+.jv-node:hover {
+border-color: rgba(207,140,23,0.4);
+transform: translateY(-3px);
+box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.jv-node-icon {
+width: 42px;
+height: 42px;
+min-width: 42px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+}
+.jv-node-icon.green {
+background: rgba(11,44,25,0.1);
+color: var(--brand);
+}
+.dark .jv-node-icon.green {
+background: rgba(207,140,23,0.1);
+color: var(--brand-blue);
+}
+.jv-node-icon.gold {
+background: rgba(207,140,23,0.1);
+color: var(--brand-blue);
+}
+.jv-node-text strong {
+display: block;
+font-size: 0.85rem;
+font-weight: 800;
+margin-bottom: 0.15rem;
+}
+.jv-node-text span {
+font-size: 0.78rem;
+color: var(--text-muted);
+}
+
+/* JV Benefits */
+.jv-benefit-list {
+display: flex;
+flex-direction: column;
+gap: 1.25rem;
+margin-bottom: 2.5rem;
+}
+.jv-benefit {
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+}
+.jv-benefit-num {
+width: 36px;
+height: 36px;
+min-width: 36px;
+background: rgba(207,140,23,0.1);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.85rem;
+font-weight: 900;
+color: var(--brand-blue);
+}
+.jv-benefit-content strong {
+display: block;
+font-size: 1rem;
+font-weight: 800;
+margin-bottom: 0.25rem;
+}
+.jv-benefit-content span {
+font-size: 0.9rem;
+color: var(--text-muted);
+line-height: 1.6;
+}
+
+/* =============================================
+HOW WE OPERATE – Off Market Section
+============================================= */
+.off-market-section {
+padding: 8rem 0;
+background: var(--card-bg);
+border-top: 1px solid var(--card-border);
+border-bottom: 1px solid var(--card-border);
+}
+.off-market-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-top: 4rem;
+}
+.om-card {
+background: var(--bg-main);
+border: 1px solid var(--card-border);
+border-radius: 24px;
+padding: 2.5rem 2rem;
+position: relative;
+overflow: hidden;
+transition: 0.3s;
+}
+.dark .om-card {
+background: rgba(255,255,255,0.02);
+border-color: rgba(255,255,255,0.05);
+}
+.om-card::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(--brand-blue), transparent);
+}
+.om-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 24px 60px rgba(0,0,0,0.08);
+border-color: rgba(207,140,23,0.2);
+}
+.om-step-num {
+font-size: 5rem;
+font-weight: 900;
+color: rgba(207,140,23,0.08);
+line-height: 1;
+margin-bottom: -1rem;
+}
+.om-icon {
+width: 56px;
+height: 56px;
+background: linear-gradient(135deg, rgba(207,140,23,0.12), rgba(207,140,23,0.06));
+border-radius: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.4rem;
+color: var(--brand-blue);
+margin-bottom: 1.5rem;
+transition: 0.3s;
+}
+.om-card:hover .om-icon {
+background: rgba(207,140,23,0.2);
+transform: scale(1.1);
+}
+.om-title {
+font-size: 1.2rem;
+font-weight: 900;
+margin-bottom: 0.75rem;
+}
+.om-desc {
+font-size: 0.92rem;
+color: var(--text-muted);
+line-height: 1.7;
+}
+
+/* =============================================
+CTA SECTION
+============================================= */
+.markets-cta {
+padding: 7rem 0;
+background: linear-gradient(135deg, #0C2612 0%, #1a4a28 100%);
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.markets-cta::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image:
+radial-gradient(circle at 20% 50%, rgba(207,140,23,0.08) 0%, transparent 50%),
+radial-gradient(circle at 80% 50%, rgba(207,140,23,0.06) 0%, transparent 50%);
+}
+
+/* =============================================
+RESPONSIVE
+============================================= */
+@media (max-width: 1024px) {
+.prop-types-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+.state-showcase-inner,
+.state-showcase-inner.reverse { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
+.jv-inner { grid-template-columns: 1fr; gap: 3rem; }
+.off-market-grid { grid-template-columns: 1fr; }
+.prop-types-grid { grid-template-columns: repeat(2, 1fr); }
+.markets-stats-bar { flex-direction: column; }
+.mkt-stat { border-right: none; border-bottom: 1px solid var(--card-border); }
+.mkt-stat:last-child { border-bottom: none; }
+.state-highlights { grid-template-columns: 1fr; }
+.jv-nodes-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+.prop-types-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+<script>
+(function () {
+try {
+var savedTheme = localStorage.getItem("theme");
+var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+var theme = savedTheme || (prefersDark ? "dark" : "light");
+document.documentElement.classList.toggle("dark", theme === "dark");
+} catch (error) {}
+})();
+</script>
+</head>
+<body>
+
+<header class="header-nav">
+<div class="nav-inner">
+<a href="index.html" class="nav-logo">
+<img src="assets/images/logo.png" alt="Land Motives LLC Logo">
+<span class="nav-brand-text">LandMotivesLLC</span>
+</a>
+
+<nav class="nav-links">
+<a href="about.html" class="nav-link">About Us</a>
+<a href="process.html" class="nav-link">Our Process</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="markets.html" class="nav-link" style="color: var(--brand-blue);">Markets</a>
+<a href="faqs.html" class="nav-link">FAQs</a>
+<a href="contact.html" class="nav-link">Contact</a>
+
+<div class="nav-dropdown">
+<a href="#" class="nav-link" style="cursor: default;">Policies <i class="fa-solid fa-chevron-down" style="font-size: 0.8rem;"></i></a>
+<div class="dropdown-menu">
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="refund-policy.html">Refund Policy</a>
+<a href="terms-conditions.html">Terms &amp; Conditions</a>
+</div>
+</div>
+</nav>
+
+<div class="nav-actions">
+<button class="theme-btn" aria-label="Toggle theme">
+<i class="fa-solid fa-moon"></i>
+</button>
+<a href="tel:3074301099" class="btn-book"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> Call (307) 430-1099</a>
+<button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+<div class="hamburger-lines">
+<span class="line line1"></span>
+<span class="line line2"></span>
+<span class="line line3"></span>
+</div>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay">
+<div class="mobile-nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="process.html">Our Process</a>
+<a href="services.html">Services</a>
+<a href="markets.html">Markets</a>
+<a href="faqs.html">FAQs</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="mobile-policies-heading">Policies</div>
+<div class="mobile-nav-links">
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="refund-policy.html">Refund Policy</a>
+<a href="terms-conditions.html">Terms &amp; Conditions</a>
+</div>
+
+<div class="mobile-call-btn-wrapper">
+<a href="tel:3074301099" class="btn-primary" style="width: 100%; justify-content: center; background: var(--brand-blue); color: #051208;"><i class="fa-solid fa-phone" style="margin-right: 0.5rem;"></i> Call Us Now</a>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- ==============================
+HERO SECTION
+============================== -->
+<section class="markets-hero">
+<div class="markets-hero-bg-pattern"></div>
+<div class="container-premium" style="position: relative; z-index: 1;">
+<div style="text-align: center;">
+<div class="badge-primary animate-up" style="display: inline-flex;">
+<i class="fa-solid fa-map-location-dot"></i> Our Markets
+</div>
+<h1 class="markets-hero-title animate-up">
+We Buy Property<br><span>Across 4 Key States.</span>
+</h1>
+<p class="hero-desc animate-up">
+Land Motives LLC operates 100% off-market — buying directly from owners, no agents, no MLS. We cover Texas, Wyoming, Florida & California with fast cash offers and zero seller fees.
+</p>
+<div class="hero-actions animate-up" style="margin-bottom: 3.5rem;">
+<a href="contact.html" class="btn-primary">Get a Cash Offer <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+<a href="#state-markets" class="btn-secondary"><i class="fa-solid fa-map-pin"></i> View Markets</a>
+</div>
+</div>
+
+<!-- Stats Bar -->
+<div class="markets-stats-bar animate-up">
+<div class="mkt-stat">
+<div class="mkt-stat-num">4</div>
+<div class="mkt-stat-label">Primary Markets</div>
+</div>
+<div class="mkt-stat">
+<div class="mkt-stat-num">5</div>
+<div class="mkt-stat-label">Property Types</div>
+</div>
+<div class="mkt-stat">
+<div class="mkt-stat-num">100%</div>
+<div class="mkt-stat-label">Off-Market</div>
+</div>
+<div class="mkt-stat">
+<div class="mkt-stat-num">$0</div>
+<div class="mkt-stat-label">Seller Fees</div>
+</div>
+<div class="mkt-stat">
+<div class="mkt-stat-num">D2D</div>
+<div class="mkt-stat-label">Direct To Seller</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+STATE MARKETS
+============================== -->
+<div id="state-markets">
+
+<!-- TEXAS -->
+<section class="state-showcase">
+<div class="container-premium">
+<div class="state-showcase-inner">
+<!-- Image -->
+<div class="state-img-wrap animate-up">
+<img src="assets/images/texas_market.png" alt="Texas real estate market – land and property acquisitions" loading="lazy">
+<div class="state-img-overlay"></div>
+<div class="state-img-badge">
+<i class="fa-solid fa-star"></i> Most Active Market
+</div>
+<div class="state-number-badge">01</div>
+</div>
+<!-- Content -->
+<div class="animate-up">
+<div class="state-content-badge primary-market">
+<i class="fa-solid fa-fire"></i> Primary Market
+</div>
+<h2 class="state-name">Texas</h2>
+<p class="state-desc">
+Texas is our most active acquisition market. With its vast rural acreage, booming suburban corridors, and fast-growing metro areas, Texas offers unmatched opportunity for both land and residential property deals. We work directly with sellers across every Texas county — from ranch land in the Panhandle to infill lots in DFW and Houston suburbs.
+</p>
+
+<div class="state-prop-tags">
+<span class="prop-tag"><i class="fa-solid fa-mountain"></i> Raw Land & Lots</span>
+<span class="prop-tag"><i class="fa-solid fa-house"></i> Single Family Homes</span>
+<span class="prop-tag"><i class="fa-solid fa-building-user"></i> Multi-Family</span>
+<span class="prop-tag"><i class="fa-solid fa-store"></i> Commercial</span>
+</div>
+
+<div class="state-highlights">
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-bolt"></i></div>
+<div class="sh-text">
+<strong>Fast Cash Closings</strong>
+<span>14-day average close in TX</span>
+</div>
+</div>
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+<div class="sh-text">
+<strong>Zero Fees</strong>
+<span>100% closing costs paid</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 2rem;">
+<a href="contact.html" class="btn-primary">Sell Texas Property <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WYOMING -->
+<section class="state-showcase">
+<div class="container-premium">
+<div class="state-showcase-inner reverse">
+<!-- Image -->
+<div class="state-img-wrap animate-up">
+<img src="assets/images/wyoming_market.png" alt="Wyoming real estate market – land and property acquisitions" loading="lazy">
+<div class="state-img-overlay"></div>
+<div class="state-img-badge">
+<i class="fa-solid fa-building"></i> Headquarters State
+</div>
+<div class="state-number-badge">02</div>
+</div>
+<!-- Content -->
+<div class="animate-up">
+<div class="state-content-badge hq-market">
+<i class="fa-solid fa-location-dot"></i> HQ State
+</div>
+<h2 class="state-name">Wyoming</h2>
+<p class="state-desc">
+As a Wyoming-based company, we have deep local knowledge and strong relationships across the state. From large mountain parcels and ranch land to vacant lots in growing towns like Sheridan, Cheyenne, and Casper, we buy all types of land directly from owners.
+</p>
+
+<div class="state-prop-tags">
+<span class="prop-tag"><i class="fa-solid fa-mountain"></i> Ranch & Rural Land</span>
+<span class="prop-tag"><i class="fa-solid fa-tree"></i> Acreage & Vacant Lots</span>
+<span class="prop-tag"><i class="fa-solid fa-house"></i> Single Family Homes</span>
+</div>
+
+<div class="state-highlights">
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-building"></i></div>
+<div class="sh-text">
+<strong>HQ Advantage</strong>
+<span>Sheridan, WY headquarters</span>
+</div>
+</div>
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-shield-halved"></i></div>
+<div class="sh-text">
+<strong>Direct Purchase</strong>
+<span>No middlemen or agent fees</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 2rem;">
+<a href="contact.html" class="btn-primary">Sell Wyoming Property <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FLORIDA -->
+<section class="state-showcase">
+<div class="container-premium">
+<div class="state-showcase-inner">
+<!-- Image -->
+<div class="state-img-wrap animate-up">
+<img src="assets/images/florida_market.png" alt="Florida real estate market – land and property acquisitions" loading="lazy">
+<div class="state-img-overlay"></div>
+<div class="state-img-badge">
+<i class="fa-solid fa-sun"></i> High Growth Market
+</div>
+<div class="state-number-badge">03</div>
+</div>
+<!-- Content -->
+<div class="animate-up">
+<div class="state-content-badge primary-market">
+<i class="fa-solid fa-fire"></i> Primary Market
+</div>
+<h2 class="state-name">Florida</h2>
+<p class="state-desc">
+Florida's rapid population growth creates high demand for infill lots, residential acreage, and commercial parcels. We help Florida landowners liquidate vacant land, inherited property, and unwanted lots quickly for cash, with zero out-of-pocket expenses.
+</p>
+
+<div class="state-prop-tags">
+<span class="prop-tag"><i class="fa-solid fa-sun"></i> Infill & Vacant Lots</span>
+<span class="prop-tag"><i class="fa-solid fa-house"></i> Single Family Homes</span>
+<span class="prop-tag"><i class="fa-solid fa-building-user"></i> Multi-Family</span>
+</div>
+
+<div class="state-highlights">
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-circle-check"></i></div>
+<div class="sh-text">
+<strong>No Agent Commissions</strong>
+<span>Keep 100% of the cash offer</span>
+</div>
+</div>
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-clock"></i></div>
+<div class="sh-text">
+<strong>Fast Off-Market Close</strong>
+<span>Close on your timeline</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 2rem;">
+<a href="contact.html" class="btn-primary">Sell Florida Property <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CALIFORNIA -->
+<section class="state-showcase">
+<div class="container-premium">
+<div class="state-showcase-inner reverse">
+<!-- Image -->
+<div class="state-img-wrap animate-up">
+<img src="assets/images/california_market.png" alt="California real estate market – land and property acquisitions" loading="lazy">
+<div class="state-img-overlay"></div>
+<div class="state-img-badge">
+<i class="fa-solid fa-gem"></i> High Value Market
+</div>
+<div class="state-number-badge">04</div>
+</div>
+<!-- Content -->
+<div class="animate-up">
+<div class="state-content-badge primary-market">
+<i class="fa-solid fa-fire"></i> Primary Market
+</div>
+<h2 class="state-name">California</h2>
+<p class="state-desc">
+Navigating the California real estate market requires experienced acquisitions specialists. We purchase land parcels, lots, single family homes, and commercial properties throughout California off-market, providing straightforward cash transactions without traditional market delays.
+</p>
+
+<div class="state-prop-tags">
+<span class="prop-tag"><i class="fa-solid fa-mountain"></i> Land & Residential Lots</span>
+<span class="prop-tag"><i class="fa-solid fa-house"></i> Single Family</span>
+<span class="prop-tag"><i class="fa-solid fa-store"></i> Commercial</span>
+</div>
+
+<div class="state-highlights">
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-file-contract"></i></div>
+<div class="sh-text">
+<strong>Title Resolution</strong>
+<span>We handle complex title clouds</span>
+</div>
+</div>
+<div class="state-highlight-item">
+<div class="sh-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+<div class="sh-text">
+<strong>Direct Cash Buyers</strong>
+<span>No loan contingencies</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 2rem;">
+<a href="contact.html" class="btn-primary">Sell California Property <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer>
+<div class="container-premium footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+<!-- Logo & About -->
+<div>
+<div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+<img src="assets/images/logo.png" alt="Land Motives Logo" style="height: 40px;">
+<span style="font-weight: 900; font-size: 1.25rem; color: white; letter-spacing: -0.5px;">LandMotivesLLC</span>
+</div>
+<p style="margin-bottom: 1rem; color: rgba(255,255,255,0.7);">Land Motives LLC delivers expert land wholesaling, fast cash offers, and zero-fee land acquisitions nationwide.</p>
+<div style="display: flex; gap: 1rem; margin-top: 1rem;">
+<a href="https://www.facebook.com/share/18nmbTeqps/?mibextid=wwXIfr" target="_blank" aria-label="Facebook" style="color: white; font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='white'"><i class="fa-brands fa-facebook"></i></a>
+<a href="https://wa.me/17373076462" target="_blank" aria-label="WhatsApp" style="color: white; font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='white'"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/landmotives/" target="_blank" aria-label="Instagram" style="color: white; font-size: 1.2rem; transition: 0.3s;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='white'"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+
+<!-- Pages -->
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<h4 style="color: white; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Company</h4>
+<a href="index.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Home</a>
+<a href="about.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">About Us</a>
+<a href="process.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Our Process</a>
+<a href="services.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Services</a>
+<a href="markets.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Markets</a>
+<a href="faqs.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">FAQs</a>
+<a href="contact.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Contact</a>
+</div>
+
+<!-- Legal -->
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<h4 style="color: white; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Legal</h4>
+<a href="privacy-policy.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Privacy Policy</a>
+<a href="terms-conditions.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Terms & Conditions</a>
+<a href="refund-policy.html" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'">Refund Policy</a>
+</div>
+
+<!-- Contact -->
+<div style="display: flex; flex-direction: column; gap: 0.75rem;">
+<h4 style="color: white; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em;">Contact Us</h4>
+<a href="tel:3074301099" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'"><i class="fa-solid fa-phone" style="width: 16px; text-align: center;"></i> (307) 430-1099</a>
+<a href="mailto:info@landmotivesllc.site" style="color: rgba(255,255,255,0.7); transition: 0.2s; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;" onmouseover="this.style.color='#CF8C17'" onmouseout="this.style.color='rgba(255,255,255,0.7)'"><i class="fa-solid fa-envelope" style="width: 16px; text-align: center;"></i> info@landmotivesllc.site</a>
+<div style="color: rgba(255,255,255,0.7); display: flex; align-items: flex-start; gap: 0.5rem;">
+<i class="fa-solid fa-location-dot" style="width: 16px; text-align: center; margin-top: 5px;"></i> 
+<span>30 N Gould St #60206<br>Sheridan, WY 82801</span>
+</div>
+</div>
+</div>
+<div class="container-premium" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.9rem; color: rgba(255,255,255,0.5);">
+&copy; 2026 Land Motives LLC. All rights reserved.
+</div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
