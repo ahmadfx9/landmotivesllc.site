@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.landmotivesllc.site/sitemap.xml
+Sitemap: https://landmotivesllc.site/sitemap.xml
